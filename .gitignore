@@ -28,6 +28,6 @@ Thumbs.db
 data/external/
 data/real_traces/
 
-# Results (generated during runs)
-results/*.csv
-results/*.png
+# Results - Keep CSV and PNG visualizations, exclude large model files
+results/**/*.pth
+results/**/checkpoint_*.pt
