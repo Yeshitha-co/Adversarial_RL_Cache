@@ -1,0 +1,13 @@
+distribution,policy,hit_rate
+Zipfian_Alpha_1.0,dqn,0.58452
+Zipfian_Alpha_1.0,lru,0.1268
+Zipfian_Alpha_1.0,lfu,0.49049
+Zipfian_Alpha_1.5,dqn,0.9591
+Zipfian_Alpha_1.5,lru,0.5552
+Zipfian_Alpha_1.5,lfu,0.94935
+Zipfian_Alpha_2.0,dqn,0.99571
+Zipfian_Alpha_2.0,lru,0.99571
+Zipfian_Alpha_2.0,lfu,0.99571
+WorkingSet_80pct,dqn,0.04947
+WorkingSet_80pct,lru,0.057
+WorkingSet_80pct,lfu,0.05772
