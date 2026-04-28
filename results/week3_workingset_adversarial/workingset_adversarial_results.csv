@@ -1,0 +1,5 @@
+Distribution,Protagonist,LRU,LFU
+Zipfian_α=2.0,0.99585,0.99585,0.99585
+Zipfian_α=1.5,0.94421,0.5577,0.95165
+Zipfian_α=1.0,0.57578,0.13405,0.51149
+WorkingSet_80%,0.08076,0.05646,0.05686
