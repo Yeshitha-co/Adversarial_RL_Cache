@@ -13,10 +13,10 @@ The result: A robust cache agent that generalizes across ALL workload types, not
 
 | Workload | DQN | LRU | LFU | Issue |
 |---|---|---|---|---|
-| Zipfian α=1.0 | 58.45% | 12.68% | 49.05% | ✅ Dominates |
-| Zipfian α=1.5 | 95.91% | 55.52% | 94.94% | ✅ Dominates |
-| Zipfian α=2.0 | 99.57% | 99.57% | 99.57% | ✅ Ties |
-| WorkingSet | 4.95% | 5.70% | 5.77% | ❌ **FAILS** |
+| Zipfian α=1.0 | 58.45% | 12.68% | 49.05% | Dominates |
+| Zipfian α=1.5 | 95.91% | 55.52% | 94.94% | Dominates |
+| Zipfian α=2.0 | 99.57% | 99.57% | 99.57% | Ties |
+| WorkingSet | 4.95% | 5.70% | 5.77% | **FAILS** |
 
 **Root Cause:** DQN overfitted to Zipfian patterns. Fails on uniform WorkingSet.
 
@@ -97,7 +97,7 @@ for round in range(num_rounds):
 | **Workload** | Zipfian α=1.0 (fixed) | Adversary-generated (adaptive) |
 | **Goal** | Maximize hit rate on one pattern | Generalize across all patterns |
 | **Training Duration** | Single pass (50k steps) | Multiple rounds (10+ rounds) |
-| **Expected Improvement** | ✅ Beats LRU/LFU on Zipfian | 🎯 **Beats both on ALL distributions** |
+| **Expected Improvement** | Beats LRU/LFU on Zipfian | **Beats both on ALL distributions** |
 
 ---
 
@@ -110,8 +110,8 @@ for round in range(num_rounds):
 | Zipfian α=1.0 | 58.45% | ~55-60% | Hold steady |
 | Zipfian α=1.5 | 95.91% | ~85-90% | Trade-off (less specialized) |
 | Zipfian α=2.0 | 99.57% | ~95-98% | Trade-off (less specialized) |
-| WorkingSet | 4.95% | **~15-25%** | ✅ **Huge improvement** |
-| **Average** | 64.72% | **~65-75%** | ✅ Better generalization |
+| WorkingSet | 4.95% | **~15-25%** | **Huge improvement** |
+| **Average** | 64.72% | **~65-75%** | Better generalization |
 
 **Key Insight:** Week 3 trades off peak performance on Zipfian for **much better** average performance across all workloads.
 
@@ -209,13 +209,3 @@ results/week3_adversarial/
 ```
 
 ---
-
-## Success Criteria
-
-✅ **Week 3 is successful if:**
-1. Protagonist hit rate on WorkingSet improves to >10% (from 4.95%)
-2. Average hit rate across distributions > Week 2
-3. Generalization gap decreases (more balanced performance)
-4. Robustness score improves (minimum performance increases)
-
-Let's build it! 🚀

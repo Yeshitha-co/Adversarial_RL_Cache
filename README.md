@@ -1,4 +1,4 @@
-# RARL-Cache: Adversarial Reinforcement Learning for Robust Web Cache Replacement
+# Adversarial Reinforcement Learning for Robust Web Cache Replacement
 
 ## Abstract
 
@@ -40,7 +40,7 @@ RL_Final_Project/
 
 ## Project Phases
 
-### **Week 1: Dataset Exploration & Classical Baselines** ✅ [COMPLETE]
+### **Week 1: Dataset Exploration & Classical Baselines**
 **Goal:** Establish baseline performance metrics using classical policies.
 
 **Deliverables:**
